@@ -1,0 +1,192 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "632e4853a3cb3e8371c9b439829330daed9864b412e978b8ec25ed899eee30f4",
+    "bytes": 100
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "9f276cfb008da9d8b04d41999b5916631a818bf39f4fdae03819e549e18f729e",
+    "bytes": 124
+  },
+  {
+    "path": "apps/bbll-adapter/README.md",
+    "sha256": "edc8c1b026d4399e534e0f42d1d9270491d537651b5933b817f10fa18a86ca5e",
+    "bytes": 1454
+  },
+  {
+    "path": "apps/bbll-adapter/src/com/xx/blbl/x3/BridgeCommandServer.java",
+    "sha256": "2131236ad095c464c22e1c5271d5ca6880075b3f482e34101eedb24cd028faa8",
+    "bytes": 6151
+  },
+  {
+    "path": "apps/bbll-adapter/src/com/xx/blbl/x3/LightningX3Helper.java",
+    "sha256": "fe062199a107edbb90cc0af0c8cad594cd7dca6a718b7d3b17126668fe9956d4",
+    "bytes": 68079
+  },
+  {
+    "path": "apps/bbll-adapter/src/com/xx/blbl/x3/RayneoMirrorHelper.java",
+    "sha256": "5a6d0a814b5fd2d17b6d4a92fa1f4c5efc801a91b618ab3ebeda50047a800f44",
+    "bytes": 66426
+  },
+  {
+    "path": "apps/douyin-browser/app/build.gradle.kts",
+    "sha256": "379a5359fd135d5b145a4cd34c50840a84ab7d4bdffe6bd8791869c719940564",
+    "bytes": 658
+  },
+  {
+    "path": "apps/douyin-browser/app/proguard-rules.pro",
+    "sha256": "7fccf00d01f6b43f474142f3412f286fdcf7076985f73ddcbf1123798732e82c",
+    "bytes": 51
+  },
+  {
+    "path": "apps/douyin-browser/app/src/main/AndroidManifest.xml",
+    "sha256": "382f2af832351cf14ad2652e6128c1604b34146b94b90ff6b9be46bf13a1abd4",
+    "bytes": 1322
+  },
+  {
+    "path": "apps/douyin-browser/app/src/main/java/com/codex/x3douyin/MainActivity.java",
+    "sha256": "a700e936b23da5dce07a43858090eb9881b5a5561ab597f801875aa1668dfd14",
+    "bytes": 40279
+  },
+  {
+    "path": "apps/douyin-browser/app/src/main/res/values/strings.xml",
+    "sha256": "f9222c7f697c4c5a667caace51b1ddb2e6ab2521b302180cbac4b57a26897787",
+    "bytes": 72
+  },
+  {
+    "path": "apps/douyin-browser/app/src/main/res/values/styles.xml",
+    "sha256": "ff5a28ed7cc97e7539d021e5236ca60ce05715b1085606d0a61a2725e5f2c627",
+    "bytes": 475
+  },
+  {
+    "path": "apps/douyin-browser/build.gradle.kts",
+    "sha256": "2f1b64f44fed1c89c312566b2c8d08a2a11f3323e99d1b91948e3d85522d22c8",
+    "bytes": 75
+  },
+  {
+    "path": "apps/douyin-browser/gradle/wrapper/gradle-wrapper.jar",
+    "sha256": "f4d953f31fbf6c38a8c330d19171c8ba6e0d1ff59d4d5c5c2d3ed821c9f3d5a3",
+    "bytes": 54708
+  },
+  {
+    "path": "apps/douyin-browser/gradle/wrapper/gradle-wrapper.properties",
+    "sha256": "00d4dd5d1cfd7006e3f0f672ac64450c97fa16a53b774198d9495e27b6448eae",
+    "bytes": 231
+  },
+  {
+    "path": "apps/douyin-browser/gradle.properties",
+    "sha256": "586b7a62b65b91c19fbba306ef03ebd2e8aa5f7f343a4fd65573a07b6f1932d5",
+    "bytes": 76
+  },
+  {
+    "path": "apps/douyin-browser/gradlew",
+    "sha256": "8c4c04dd98db1f00d49456dd162418a39312c5cb13d6865d783deb483bd1ed22",
+    "bytes": 5296
+  },
+  {
+    "path": "apps/douyin-browser/gradlew.bat",
+    "sha256": "2f18fc6abd50803de7b3a225038d284268904c9d13caa6cf81f99365dc876479",
+    "bytes": 2176
+  },
+  {
+    "path": "apps/douyin-browser/README.md",
+    "sha256": "894dd3588dfabc3587d5382a92b783f55af64bf96acabb3b21cae4daedbe29fa",
+    "bytes": 1948
+  },
+  {
+    "path": "apps/douyin-browser/settings.gradle.kts",
+    "sha256": "21907a8ba06d2233419929cbfa2cad2269b978ec70fc8f89518adf58a4a1bec4",
+    "bytes": 337
+  },
+  {
+    "path": "apps/lemuroid-port/overlay/lemuroid-app/src/main/java/com/swordfish/lemuroid/app/rayneo/RayNeoX3Config.kt",
+    "sha256": "35f331598439a9ce6cf5394288f82578f58ee6adc9f66a30c2ea3d6a6d3ca2af",
+    "bytes": 98
+  },
+  {
+    "path": "apps/lemuroid-port/overlay/lemuroid-app/src/main/java/com/swordfish/lemuroid/app/rayneo/RayNeoX3Mirror.kt",
+    "sha256": "f6200d5612a6addd8dda6c86888d6b10b788ac3d47ae72c4dc58b592b669997e",
+    "bytes": 10359
+  },
+  {
+    "path": "apps/lemuroid-port/overlay/lemuroid-app/src/main/java/com/swordfish/lemuroid/app/rayneo/RayNeoX3StorageBootstrap.kt",
+    "sha256": "a69189388586bbed9e6918dccb2864074f36976c12f2ce8609d17d55be6f9e7c",
+    "bytes": 1967
+  },
+  {
+    "path": "apps/lemuroid-port/overlay/lemuroid-app/src/main/res/values/rayneo_ids.xml",
+    "sha256": "966293de8b08e46572fc6f788e8f1c6ef97f15b31dbc39325c21b3862586df87",
+    "bytes": 115
+  },
+  {
+    "path": "apps/lemuroid-port/patches/lemuroid-x3pro.patch",
+    "sha256": "c04e38ba3de11fad6774eda508f0fb7db687b673f61abb60c917191156d3ac49",
+    "bytes": 322548
+  },
+  {
+    "path": "apps/lemuroid-port/patches/libretrodroid-0.13.2-x3pro.patch",
+    "sha256": "9d03f26c291485a7e024dbe3fd74c740b73ec7250da0e9f5fce0c877179a88a4",
+    "bytes": 4156
+  },
+  {
+    "path": "apps/lemuroid-port/README.md",
+    "sha256": "86fd25fe7a4312686b4a3ce07debd24dd711ebabf10499dbacf3d6d08612502c",
+    "bytes": 2492
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "sha256": "1890a8bc1ecaf71f823b6b311b2b184a48da1bc64168e793e4b365db5833990a",
+    "bytes": 787
+  },
+  {
+    "path": "docs/bluetooth-research-2026-10-10.md",
+    "sha256": "c0effbb843f1a9a580931eaf2dbd4aab11da4c0d071e07664c2a00a0acf73d78",
+    "bytes": 3530
+  },
+  {
+    "path": "docs/douyin-v0.4.0-release-notes.md",
+    "sha256": "aec4a674b071d4f921fd4f52bb41ba64f7aeff0ce719225b4b67b34e9cfa8f13",
+    "bytes": 720
+  },
+  {
+    "path": "docs/launcher-feasibility.md",
+    "sha256": "2be1645122b9f3a620e005aabe6d6c497e97fa03b65494a7c698f2b51cac5e0a",
+    "bytes": 2724
+  },
+  {
+    "path": "docs/repository-metadata-2026-10-10.json",
+    "sha256": "d5075f96efb023334730e7696924d7b96cf832fc0a3761c58635e5a869e4685e",
+    "bytes": 1856
+  },
+  {
+    "path": "docs/verification-2026-10-10.md",
+    "sha256": "d1dec7030d31f8374adb4ff8f0e5d97966f3bc9c6aa44eefc5b8c7f04584f10b",
+    "bytes": 1600
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "3aa05f634e031afdcf47c728aadfbf2934493a74bf8cafa32b3f72ad6079c2ed",
+    "bytes": 35827
+  },
+  {
+    "path": "LICENSE_SCOPE.md",
+    "sha256": "57d6505203109d5e4df2ce7818743a1067f5f07a21ee05ea3b599fc285f7302e",
+    "bytes": 716
+  },
+  {
+    "path": "licenses/Apache-2.0.txt",
+    "sha256": "50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a",
+    "bytes": 11324
+  },
+  {
+    "path": "README.md",
+    "sha256": "4e67606b8d990f13553df897e5216498abffa2d199b3a18967c72a9d9b43dd6d",
+    "bytes": 2443
+  },
+  {
+    "path": "THIRD_PARTY_NOTICES.md",
+    "sha256": "20299f3a7121b1d4b6eebfb714b0b1a487cd961b952c44e15c508defe5fde85e",
+    "bytes": 3107
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "checked_on": "2026-10-10 Asia/Shanghai",
+  "repositories": [
+    {
+      "full_name": "informalTechCode/TAPLINKX3",
+      "html_url": "https://github.com/informalTechCode/TAPLINKX3",
+      "default_branch": "main",
+      "pushed_at": "2026-08-19T18:16:21Z",
+      "updated_at": "2026-09-07T15:28:32Z",
+      "archived": false,
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "informalTechCode/moonlight-android-RayNeoX3",
+      "html_url": "https://github.com/informalTechCode/moonlight-android-RayNeoX3",
+      "default_branch": "master",
+      "pushed_at": "2026-02-12T04:26:51Z",
+      "updated_at": "2026-09-04T13:32:24Z",
+      "archived": false,
+      "license": "GPL-3.0"
+    },
+    {
+      "full_name": "tropicalstream/tapgem",
+      "html_url": "https://github.com/tropicalstream/tapgem",
+      "default_branch": "main",
+      "pushed_at": "2026-09-24T17:40:34Z",
+      "updated_at": "2026-09-26T01:03:36Z",
+      "archived": false,
+      "license": null
+    },
+    {
+      "full_name": "Swordfish90/Lemuroid",
+      "html_url": "https://github.com/Swordfish90/Lemuroid",
+      "default_branch": "master",
+      "pushed_at": "2026-10-05T22:15:29Z",
+      "updated_at": "2026-10-10T03:04:07Z",
+      "archived": false,
+      "license": "GPL-3.0"
+    },
+    {
+      "full_name": "Swordfish90/LibretroDroid",
+      "html_url": "https://github.com/Swordfish90/LibretroDroid",
+      "default_branch": "master",
+      "pushed_at": "2026-05-24T08:47:16Z",
+      "updated_at": "2026-10-08T20:51:20Z",
+      "archived": false,
+      "license": "GPL-3.0"
+    },
+    {
+      "full_name": "swyefun/BBLLV5",
+      "html_url": "https://github.com/swyefun/BBLLV5",
+      "default_branch": "main",
+      "pushed_at": "2026-06-10T14:57:24Z",
+      "updated_at": "2026-10-07T06:36:26Z",
+      "archived": false,
+      "license": null
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+diff --git a/libretrodroid/build.gradle b/libretrodroid/build.gradle
+--- a/libretrodroid/build.gradle
++++ b/libretrodroid/build.gradle
+@@ -24,6 +24,10 @@
+                 // Available arguments are inside ${SDK}/cmake/.../android.toolchain.cmake file
+                 arguments '-DANDROID_STL=c++_static'
+             }
++        }
++
++        ndk {
++            abiFilters 'arm64-v8a'
+         }
+     }
+ 
+diff --git a/libretrodroid/src/main/cpp/video.cpp b/libretrodroid/src/main/cpp/video.cpp
+--- a/libretrodroid/src/main/cpp/video.cpp
++++ b/libretrodroid/src/main/cpp/video.cpp
+@@ -163,16 +163,10 @@
+         auto shader = shadersChain[i];
+         auto passData = renderer->getPassData(i);
+         auto isLastPass = i == shadersChain.size() - 1;
++        auto passWidth = passData.width.value_or(videoLayout.getScreenWidth());
++        auto passHeight = passData.height.value_or(videoLayout.getScreenHeight());
+ 
+         glBindFramebuffer(GL_FRAMEBUFFER, passData.framebuffer.value_or(0));
+-
+-        glViewport(
+-            0,
+-            0,
+-            passData.width.value_or(videoLayout.getScreenWidth()),
+-            passData.height.value_or(videoLayout.getScreenHeight())
+-        );
+-
+         glUseProgram(shader.gProgram);
+ 
+         auto vertices = isLastPass ? videoLayout.getForegroundVertices() : videoLayout.getFramebufferVertices();
+@@ -197,7 +191,19 @@
+ 
+         glUniform1f(shader.gScreenDensityHandle, getScreenDensity());
+ 
+-        glDrawArrays(GL_TRIANGLES, 0, 6);
++        auto drawPass = [&]() {
++            glDrawArrays(GL_TRIANGLES, 0, 6);
++        };
++
++        if (isLastPass && rayNeoX3StereoMirror) {
++            glViewport(0, 0, passWidth, passHeight);
++            drawPass();
++            glViewport(passWidth, 0, passWidth, passHeight);
++            drawPass();
++        } else {
++            glViewport(0, 0, passWidth, passHeight);
++            drawPass();
++        }
+ 
+         glDisableVertexAttribArray(shader.gvPositionHandle);
+         glDisableVertexAttribArray(shader.gvCoordinateHandle);
+@@ -233,7 +239,13 @@
+ }
+ 
+ void Video::updateScreenSize(unsigned width, unsigned height) {
+-    videoLayout.updateScreenSize(width, height);
++    rayNeoX3StereoMirror = width == 1280 && height == 480;
++    if (rayNeoX3StereoMirror) {
++        LOGI("RayNeo X3 stereo mirror rendering enabled: %u x %u -> 640 x 480 per eye", width, height);
++        videoLayout.updateScreenSize(width / 2, height);
++    } else {
++        videoLayout.updateScreenSize(width, height);
++    }
+ }
+ 
+ void Video::updateViewportSize(Rect viewportRect) {
+diff --git a/libretrodroid/src/main/cpp/video.h b/libretrodroid/src/main/cpp/video.h
+--- a/libretrodroid/src/main/cpp/video.h
++++ b/libretrodroid/src/main/cpp/video.h
+@@ -72,6 +72,7 @@
+     void updateRendererSize(unsigned width, unsigned height);
+     void updateRotation(float rotation);
+     void updateShaderType(ShaderManager::Config shaderConfig);
++    bool isRayNeoX3StereoMirrorEnabled() const { return rayNeoX3StereoMirror; }
+ 
+     void renderFrame();
+ 
+@@ -106,6 +107,7 @@
+     std::vector<ShaderChainEntry> shadersChain;
+ 
+     bool immersiveModeEnabled = false;
++    bool rayNeoX3StereoMirror = false;
+     ImmersiveMode immersiveMode;
+     VideoLayout videoLayout;
+ 
+diff --git a/libretrodroid/src/main/cpp/audio.cpp b/libretrodroid/src/main/cpp/audio.cpp
+--- a/libretrodroid/src/main/cpp/audio.cpp
++++ b/libretrodroid/src/main/cpp/audio.cpp
+@@ -43,6 +43,8 @@
+     builder.setFormat(oboe::AudioFormat::I16);
+     builder.setDataCallback(this);
+     builder.setErrorCallback(this);
++    builder.setAudioApi(oboe::AudioApi::OpenSLES);
++    builder.setSharingMode(oboe::SharingMode::Shared);
+ 
+     if (audioLatencySettings->useLowLatencyStream) {
+         builder.setPerformanceMode(oboe::PerformanceMode::LowLatency);
+diff --git a/libretrodroid/src/main/cpp/audio.h b/libretrodroid/src/main/cpp/audio.h
+--- a/libretrodroid/src/main/cpp/audio.h
++++ b/libretrodroid/src/main/cpp/audio.h
+@@ -21,7 +21,7 @@
+ #include <array>
+ #include <unistd.h>
+ #include <oboe/Oboe.h>
+-#include <oboe/FifoBuffer.h>
++#include <fifo/FifoBuffer.h>
+ 
+ #include "resamplers/linearresampler.h"
+ 

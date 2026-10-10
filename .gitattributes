@@ -1,0 +1,3 @@
+# Preserve exact source and patch bytes recorded in docs/source-manifest.json.
+* -text
+*.jar binary
